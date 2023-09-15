@@ -1,0 +1,29 @@
+button {
+  display: inline-block;
+  border-radius: var(--border-radius);
+  color: var(--bs-white);
+  background-color: var(--bs-info);
+  border: none;
+  padding: 1rem;
+  text-decoration: none;
+  line-height: 1;
+  // height: 40px; // Causa desalinhamento
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.btn {
+  @extend button;
+
+  &.btn-sm {
+    padding: .5rem;
+  }
+
+
+  @each $name, $color in $theme-colors {
+    &-#{$name} {
+      color: color-contrast($color, $gray-800, $gray-100);
+      background-color: $color !important;
+    }
+  }
+}

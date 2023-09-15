@@ -1,0 +1,93 @@
+// _chat-styles.scss
+
+:host {
+  > main {
+    > section {
+      background-color:snow;
+      height: 335px;
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: rgb(130, 130, 143) transparent;
+      max-width: 320px;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: rgb(130, 130, 143);
+        border-radius: 4px;
+      }
+
+      > article {
+        padding: 10px;
+
+        .mensagem {
+          display: flex;
+          padding: 5px;
+          margin-bottom: 5px;
+        }
+
+        .mensagem-bot {
+          justify-content: flex-start;
+
+          .gif-imagem {
+            height: 25px;
+          }
+        }
+
+        .mensagem-user {
+          justify-content: flex-end;
+        }
+
+        .mensagem span {
+          padding: 7px 16px;
+          border-radius: 20px;
+          background-color: #fff;
+          font-family: "Roboto", sans-serif;
+          font-size: 14px;
+          border: 1px solid #e0e0e0;
+          font-weight: 400;
+          max-width: 80%;
+          font-weight: normal;
+          //display: inline-block; /* Alteração para ajustar ao tamanho do conteúdo */
+
+        }
+
+        .mensagem-bot a {
+          background-color: #3b3b87;
+          border-radius: 5px;
+          color: white;
+          font-size: 10px;
+          height: 16px;
+          width: 13px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+        }
+
+        .mensagem-user span {
+          background-color: #e0e0e0;
+          color: rgb(15, 15, 15);
+        }
+
+        /* Your custom styles here */
+        .my-button {
+          border-radius: 8px;
+          border: 1px solid #e0e0e0;
+          box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.24);
+          margin-top: 28px;
+          margin-left: -6px;
+          color: rgb(22,22,22);
+          // Add other styles as needed
+        }
+
+      }
+    }
+  }
+}

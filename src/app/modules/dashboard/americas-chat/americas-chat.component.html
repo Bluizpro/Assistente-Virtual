@@ -1,0 +1,57 @@
+<app-abrir-chat *ngIf="!aberto" (abrirOuFecharChat)="toggleChat()">"></app-abrir-chat>
+
+<main *ngIf="aberto">
+  <header>
+    <div>
+      <img src="assets/chat/chatbot.png" class="iconChat" />
+
+      <div class="nome-bot">
+        
+        <h3 class="span-02">Assistente Virtual</h3>
+      </div>
+
+    </div>
+    <div class="opcao">
+      <button class="fechar" (click)="toggleChat()"><img src="assets/chat/fechar.png"></button>
+    </div>
+  </header>
+  <section #chatContainer>
+    <article>
+
+      <ng-container *ngFor="let c of chat">
+        <div class="mensagem"
+             [ngClass]="{'mensagem-bot': c.mensagem.enviador === 'bot', 'mensagem-user': c.mensagem.enviador !== 'bot'}">
+
+          <ng-container *ngIf="c.mensagem.isPending; else mensagemNormal">
+            <!-- Display pending message content here -->
+          </ng-container>
+
+          <ng-template #mensagemNormal>
+            <span [innerHTML]="makeUrlsClickable(c.mensagem.mensagem)" style="white-space: pre-line;"></span>
+            <a *ngIf="c.mensagem.numeroResposta" routerLink="conteudo"
+               [queryParams]="{ pergunta: c?.pergunta, trechosIds: listConteudoToIdsParams(c.mensagem.trechos)}"
+               target="_blank">
+              {{ c.mensagem.numeroResposta }}
+            </a>
+          </ng-template>
+        </div>
+      </ng-container>
+    </article>
+  </section>
+
+  <div class="input">
+    <input type="text" placeholder="Digite sua dúvida" [(ngModel)]="message" (keyup.enter)="sendMessageBot()">
+    <button class="btnEnviar" [disabled]="!isValidMessage()" (click)="sendMessageBot()">
+      <img src="assets/chat/right-seta.png">
+    </button>
+
+  </div>
+  <footer>
+    <div>
+
+    </div>
+    <div>
+
+    </div>
+  </footer>
+</main>

@@ -1,0 +1,207 @@
+:host {
+  display: block;
+  box-sizing: border-box;
+  padding: 6% 20%;
+  background-color: black;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+
+
+  >main {
+    height: 520px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #666666;
+    position: absolute;
+    right: 25px;
+    bottom: 20px;
+    background: white;
+
+    >header {
+      height: 80px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom: 2px solid lightgrey;
+      background: #ededed;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .iconChat {
+        width: 50px;
+        height: 50px;
+        background-color: #6D2077;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 10px;
+        box-shadow: 0 0 5px #666666;
+        cursor: pointer;
+      }
+
+      div {
+        display: flex;
+      }
+
+
+  .nome-bot {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: self-start;
+
+    h3 {
+      font-family: 'roboto', sans-serif;
+      font-weight: 400;
+      color: #6D2077;
+      margin: 0; /* Remover margem padrão dos <h3> */
+
+      &.span-01 {
+        font-size: 20px;
+        font-weight: bold; /* Usar "bold" em vez de "roboto" para font-weight */
+      }
+
+      &.span-02 {
+        font-size: 18px;
+        font-weight: normal;
+      }
+    }
+  }
+
+
+      .opcao {
+        display: flex;
+        justify-content: center;
+        padding-top: 10px;
+        padding-right: 10px;
+        height: 100%;
+      }
+
+      .opcao button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        height: 30px;
+        width: 30px;
+      }
+
+      .opcao button img {
+        width: 16px;
+      }
+
+      .fechar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        border: none;
+      }
+
+      .fechar:hover {
+        background-color: #cccccc;
+        border-radius: 50%;
+      }
+    }
+
+
+
+    .input {
+      height: 55px;
+      width: 90%;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0 15px;
+      border-top: solid lightgray 1px;
+
+      input {
+        width: 80%;
+        height: 40px;
+        border-radius: 7px;
+        border: none;
+        padding: 0 10px;
+        font-size: 12pt;
+        font-weight: 400;
+      }
+
+      input:focus {
+        outline: none;
+      }
+
+      input:focus::-webkit-input-placeholder {
+        color: #0099ff;
+        font-size: 9pt;
+        opacity: 0.8;
+        transform: translateY(-15px);
+        transition: all 0.3s ease;
+      }
+
+      input:focus::-moz-placeholder {
+        color: #0099ff;
+        font-size: 9pt;
+        opacity: 0.8;
+        transform: translateY(-15px);
+        transition: all 0.3s ease;
+      }
+
+      input:focus:-ms-input-placeholder {
+        color: #0099ff;
+        font-size: 9pt;
+        opacity: 0.8;
+        transform: translateY(-15px);
+        transition: all 0.3s ease;
+      }
+
+      input:focus:-moz-placeholder {
+        color: #0099ff;
+        font-size: 9pt;
+        opacity: 0.8;
+        transform: translateY(-15px);
+        transition: all 0.3s ease;
+      }
+
+      button {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        background-color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+    }
+
+    footer {
+      height: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      background-color: #F3F0F0;
+
+      img {
+        height: 25px;
+      }
+
+      span,
+      a {
+        font-weight: 400;
+        color: #828282;
+        font-size: 14px;
+
+      }
+    }
+  }
+  .big-button {
+    font-size: 20px;
+    padding: 10px 50px;
+  }
+}
